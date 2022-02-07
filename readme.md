@@ -1,7 +1,8 @@
 # Template
 I wrote this template in order to illustrate what I think are the most minimal and well-known ways to collaborate on Python code.
 
-## Commands to know
+## Getting Started
+For more information about installing packages, including virtual environments, consult the [Installing Packages Tutorial](https://packaging.python.org/en/latest/tutorials/installing-packages/) from the [Python Packaging User Guide](https://packaging.python.org/en/latest/). Here is a summary.
 
 Create a virtual environment called 'venv' in the project root.
 ```sh
@@ -18,21 +19,19 @@ Install the Python project package as *editable*, along with the features *inter
 pip install -e ".[interactive,nlp]"
 ```
 
-Deactivate the virtual environment.
+You should now be ready to use and modify the package while in the virtual environment. Further, you should be able to use this virtual environment to run a Jupyter notebook, and have access to most of the libraries from the book, like NLTK, MatPlotLib, Numpy, and NetworkX.
+
+You can deactivate the virtual environment whenever you want by running
 ```sh
 deactivate
 ```
 
-You should now be ready to use and modify the package while in the virtual environment. Further, you should be able to use this virtual environment to run a Jupyter notebook, and have access to most of the libraries from the book, like NLTK, MatPlotLib, Numpy, and NetworkX.
-
-If you've been following each command, you will notice your virtual environment is now deactivated. However, it still lives in the `venv` directory, and is ready to be used when you need. Check also that your command prompt should have changed when the environment was active, probably saying something like `(venv) $`. After this, it's just a matter of remembering to activate the virtual environment when you want to work in it.
-
-Start the virtual environment again.
+And to start the virtual environment again, just run
 ```sh
 source venv/bin/activate
 ```
 
-At this point, it's a bit difficult to explain Git, but learn some of the basics, and remember to create a new branch to store your changes. Often I forget, and it's a little headache to move commits around after the fact.
+
 
 ## Development
 
@@ -65,8 +64,6 @@ python -m unittest discover
 
 Lots of IDEs can discover and show a list of all the tests available, as well as if they pass or fail, making them indispensable tools when computations and changes begin getting complicated.
 
-Once you've finished working on some code, you probably want to commit, maybe push your changes, make a pull request, etc. You can deactivate the environment whenever you want with the `deactivate` command, which wouldn't change Git's functionality. This is all you need! Happy coding!
-
 ---
 
 ## Extra files
@@ -81,3 +78,13 @@ As well, your own `venv` folder should not be pushed to the repository, and I've
 
 A folder alongside the Jupyter notebooks called `.ipynb_checkpoints` can also be ignored. It is just auxiliary data from opening and editing notebooks.
 
+---
+
+## Resources
+ 
+- [The NLTK Book](https://www.nltk.org/book/), updated for Python 3 and NLTK 3.
+- [Python 3 Documentation](https://docs.python.org/3/index.html)
+    - [The `venv` module](https://docs.python.org/3/library/venv.html)
+    - [The `unittest` module](https://docs.python.org/3/library/unittest.html)
+- [NumPy Website](https://numpy.org/)
+- [Matplotlib Website](https://matplotlib.org/)
